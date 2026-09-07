@@ -21,4 +21,4 @@ This repository contains the core foundation:
 2. Copy `.env.example` to `.env` and adjust settings (use SQLite for local dev).
 3. Initialize database:
    ```bash
-   python -c "from app.database import init_db; init_db()"
+   python -c "from app.database import init_db; init_db()" 
