@@ -29,4 +29,4 @@ async def register_capability(
     if registry.get_by_code(cap_data.code):
         raise HTTPException(status_code=400, detail="Capability code already exists")
     new_cap = Capability(**cap_data.dict())
-    return registry.register(new_cap) 
+    return registry.register(new_cap)  
