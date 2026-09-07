@@ -17,4 +17,4 @@ class CapabilityResponse(CapabilityBase):
     created_at: datetime
 
     class Config:
-        orm_mode = True
+        orm_mode = True 
