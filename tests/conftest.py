@@ -72,4 +72,4 @@ def admin_user(setup_db):
     db.add(user)
     db.commit()
     db.refresh(user)
-    return user
+    return user 
