@@ -15,4 +15,4 @@ class Capability(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     # optional scope restrictions
-    requires_approval = Column(Boolean, default=False)
+    requires_approval = Column(Boolean, default=False) 
