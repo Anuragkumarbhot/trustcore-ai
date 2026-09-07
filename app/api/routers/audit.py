@@ -49,4 +49,4 @@ async def register(user_data: UserCreate, db: Session = Depends(get_db)):
     db.refresh(new_user)
     access_token = create_access_token(data={"sub": new_user.username})
     log_action(db, new_user, "REGISTER", target_type="user", target_id=str(new_user.id))
-    return {"access_token": access_token, "token_type": "bearer"}
+    return {"access_token": access_token, "token_type": "bearer"} 
