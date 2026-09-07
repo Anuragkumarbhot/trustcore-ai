@@ -12,4 +12,4 @@ class AuditLog(Base):
     target_id = Column(String, nullable=True)
     details = Column(Text, nullable=True)  # JSON string
     ip_address = Column(String, nullable=True)
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    created_at = Column(DateTime(timezone=True), server_default=func.now()) 
