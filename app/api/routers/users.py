@@ -20,4 +20,4 @@ async def list_users(
     db: Session = Depends(get_db)
 ):
     users = db.query(User).all()
-    return users
+    return users 
