@@ -24,7 +24,7 @@ env/
 
 # OS
 .DS_Store
-Thumbs.db
+Thumbs.db 
 
 # Docker
 docker-compose.override.yml
