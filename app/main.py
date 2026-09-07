@@ -6,11 +6,10 @@ from app.config import settings
 from app.database import init_db
 
 app = FastAPI(
-    title=settings.APP_NAME,
+    title="TRUSTCORE AAIRA",
     debug=settings.DEBUG,
 )
 
-# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.ALLOWED_ORIGINS,
@@ -19,7 +18,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include routers
 app.include_router(auth.router, prefix="/api/v1")
 app.include_router(users.router, prefix="/api/v1")
 app.include_router(capabilities.router, prefix="/api/v1")
@@ -33,7 +31,7 @@ def on_startup():
 
 @app.get("/", tags=["system"])
 async def root():
-    return {"message": "TRUSTCORE AI API"}
+    return {"message": "TRUSTCORE AAIRA API"}
 
 
 @app.get("/health", tags=["system"])
