@@ -24,7 +24,7 @@ async def get_current_user(
     if username is None:
         raise credentials_exception
     user = db.query(User).filter(User.username == username).first()
-    if user is None:
+    if user is None: 
         raise credentials_exception
     if not user.is_active:
         raise HTTPException(status_code=400, detail="Inactive user")
